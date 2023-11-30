@@ -17,7 +17,7 @@
         map:uiRotateGestures="true"
         map:uiZoomControls="true"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="181dp" />
+        tools:layout_editor_absoluteY="0dp" />
 
     <TextView
         android:id="@+id/tvUbicacion"
@@ -28,16 +28,28 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/map" />
+    <ImageButton
+        android:id="@+id/btnMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="5dp"
+        android:background="?android:attr/windowSplashScreenIconBackgroundColor"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        map:srcCompat="@drawable/ic_menu" />
 
     <ImageButton
         android:id="@+id/btnCamera"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="5dp"
+        android:background="?android:attr/windowSplashScreenIconBackgroundColor"
         android:contentDescription="@string/app_name"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/map"
+        app:layout_constraintTop_toTopOf="parent"
         map:srcCompat="@drawable/ic_camara1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
