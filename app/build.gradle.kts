@@ -1,5 +1,6 @@
 plugins {
     id("com.android.application")
+    id("org.jetbrains.kotlin.android")
 }
 
 android {
@@ -14,6 +15,13 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    kotlinOptions {
+        jvmTarget = "1.8" // Puedes ajustar esto según tu versión de Java preferida
+    }
+
+    buildFeatures {
+        viewBinding=true
     }
 
     buildTypes {
@@ -40,4 +48,16 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+
+    //CAMARA
+    implementation ("androidx.camera:camera-core:1.1.0-beta01")
+    implementation ("androidx.camera:camera-camera2:1.1.0-beta01")
+    implementation ("androidx.camera:camera-lifecycle:1.1.0-beta01")
+    implementation ("androidx.camera:camera-video:1.1.0-beta01")
+
+    implementation ("androidx.camera:camera-view:1.1.0-beta01")
+    implementation ("androidx.camera:camera-extensions:1.1.0-beta01")
+
+
 }
