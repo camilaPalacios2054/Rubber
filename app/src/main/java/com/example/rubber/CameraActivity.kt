@@ -36,6 +36,7 @@ import java.util.Locale
 
 typealias LumaListener = (luma: Double) -> Unit
 
+//cambio a media camara seguir en paso 5 de android developer https://developer.android.com/codelabs/camerax-getting-started?hl=es-419#4
 class CameraActivity : AppCompatActivity() {
 
     private lateinit var viewBinding: ActivityCameraBinding
