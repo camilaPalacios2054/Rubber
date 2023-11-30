@@ -34,7 +34,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     //EditText txtLatitud,txtlongitud;
     GoogleMap mMap;
     TextView tvUbicacion;
-    ImageButton btnCamara;
+    ImageButton btnCamara,btnMenu;
     private LocationManager locationManager;
     private Marker myLocationMarker;
 
@@ -44,11 +44,19 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         setContentView(R.layout.activity_maps);
         tvUbicacion=findViewById(R.id.tvUbicacion);
         btnCamara=findViewById(R.id.btnCamera);
+        btnMenu=findViewById(R.id.btnMenu);
 
         btnCamara.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MapsActivity.this,CameraActivity.class);
+                startActivity(intent);
+            }
+        });
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MapsActivity.this,MenuActivity.class);
                 startActivity(intent);
             }
         });
