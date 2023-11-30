@@ -8,6 +8,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.app.LocaleManager;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationListener;
@@ -16,6 +17,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -32,6 +34,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
     //EditText txtLatitud,txtlongitud;
     GoogleMap mMap;
     TextView tvUbicacion;
+    ImageButton btnCamara;
     private LocationManager locationManager;
     private Marker myLocationMarker;
 
@@ -40,6 +43,15 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps);
         tvUbicacion=findViewById(R.id.tvUbicacion);
+        btnCamara=findViewById(R.id.btnCamera);
+
+        btnCamara.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MapsActivity.this,CameraActivity.class);
+                startActivity(intent);
+            }
+        });
         //pedirPermisosUbicacion();
         //miUbicacion();
         //txtLatitud=findViewById(R.id.txtLatitud);
