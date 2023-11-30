@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">My Application</string>
+    //Text MainActivity
+    <string name="loginTitle">Login</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="loginButton">LOGIN</string>
+    <string name="google_key">AIzaSyAmQinK6h-yTqm-Ui_i6TlvtE0YZj3Wp5s</string>
+
+</resources>
