@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "398399853870",
+    "project_id": "rubber-a50d9",
+    "storage_bucket": "rubber-a50d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398399853870:android:3fe544402fc4d9f2be56bf",
+        "android_client_info": {
+          "package_name": "com.example.rubber"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDS-Tz90IBbfqPQkTt9PhgKB1VCXvO0D5Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

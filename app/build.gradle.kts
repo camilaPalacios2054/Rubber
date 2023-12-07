@@ -1,6 +1,7 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -61,6 +62,14 @@ dependencies {
 
     implementation ("androidx.camera:camera-view:1.1.0-beta01")
     implementation ("androidx.camera:camera-extensions:1.1.0-beta01")
+
+    //FIREBASE Y FIRESTORE
+
+    implementation ("com.google.firebase:firebase-firestore:24.9.1")
+    implementation ("com.google.firebase:firebase-analytics:21.5.0")
+    implementation ("com.google.firebase:firebase-bom:32.6.0")
+    implementation("com.android.support:multidex:1.0.3")
+
 
 
 }

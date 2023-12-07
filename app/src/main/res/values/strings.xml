@@ -7,6 +7,13 @@
     <string name="loginButton">LOGIN</string>
     <string name="google_key">AIzaSyAmQinK6h-yTqm-Ui_i6TlvtE0YZj3Wp5s</string>
 
+    <!--Text CrearUsuariosMain-->
+    <string name="welcomeTitle">¡Únete!</string>
+    <string name="nombreyapellido">Nombre y apellido</string>
+    <string name="email">E-mail</string>
+    <string name="registro">REGISTRAR</string>
+    <string name="cargarDatos">CARGAR DATOS</string>
+
     <!--CAMARA-->
     <string name="app_namecam">CameraXApp</string>
     <string name="take_photo">Take Photo</string>
