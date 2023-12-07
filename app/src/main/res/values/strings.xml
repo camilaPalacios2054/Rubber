@@ -12,6 +12,7 @@
     <string name="nombreyapellido">Nombre y apellido</string>
     <string name="email">E-mail</string>
     <string name="registro">REGISTRAR</string>
+    <string name="cargarDatos">CARGAR DATOS</string>
 
     <!--CAMARA-->
     <string name="app_namecam">CameraXApp</string>
