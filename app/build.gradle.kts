@@ -70,6 +70,12 @@ dependencies {
     implementation ("com.google.firebase:firebase-bom:32.6.0")
     implementation("com.android.support:multidex:1.0.3")
 
-
-
+    //MQTT
+    implementation ("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0")
+    implementation ("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
+    {
+        exclude(group,"com.android.support")
+        exclude(module="appcompat-v7")
+        exclude(module="support-v4")
+    }
 }

@@ -52,6 +52,10 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDKHi0BIi7Y-c1HdmW2hge6o7iPMZSK2DA" />
+
+        <service
+            android:name="org.eclipse.paho.android.service.MqttService"
+            android:exported="false"/>
     </application>
 
 </manifest>
