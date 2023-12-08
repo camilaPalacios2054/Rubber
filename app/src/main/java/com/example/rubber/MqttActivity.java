@@ -20,9 +20,10 @@ public class MqttActivity extends AppCompatActivity {
     //CONEXION AL SERVIDOR
 
     //mqtt://santotomasproyect-mqtt:L8d9iJ3GBRveTeU9@santotomasproyect-mqtt.cloud.shiftr.io
-    static String MQTTHOST="tcp://santotomasproyect-mqtt.cloud.shiftr.io:1883";
-    static String MQTTUSER="santotomasproyect-mqtt";
-    static String MQTTPASS="L8d9iJ3GBRveTeU9";
+    //mqtt://sharddrifter615:s6krS92TYNl3w4dh@sharddrifter615.cloud.shiftr.io
+    static String MQTTHOST="tcp://broker.shiftr.io:1883";
+    static String MQTTUSER="sharddrifter615";
+    static String MQTTPASS="s6krS92TYNl3w4dh";
 
     MqttAndroidClient cliente;
     MqttConnectOptions opciones;
