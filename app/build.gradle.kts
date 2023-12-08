@@ -71,7 +71,13 @@ dependencies {
     implementation("com.android.support:multidex:1.0.3")
 
     //MQTT
-    implementation ("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0")
+    //noinspection GradleCompatible
+    implementation ("com.android.support:support-v4:28.0.0")
+    //noinspection GradleCompatible
+    implementation ("com.android.support:localbroadcastmanager:28.0.0")
+
+    implementation ("org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.1")
+
     implementation ("org.eclipse.paho:org.eclipse.paho.android.service:1.1.1")
     {
         exclude(group,"com.android.support")
