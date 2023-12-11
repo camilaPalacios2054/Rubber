@@ -27,10 +27,11 @@ public class MenuActivity extends AppCompatActivity {
     public void init()
     {
         elements=new ArrayList<>();
-        elements.add(new MenuElement("#775447","Perfil"));
-        elements.add(new MenuElement("#607d8b","Gato"));
-        elements.add(new MenuElement("#775447","Cuenta"));
-        elements.add(new MenuElement("#775447","Perfil"));
+        elements.add(new MenuElement("#FFFFFF","Datos de usuario"));
+        elements.add(new MenuElement("#FFFFFF","Rutas creadas"));
+        elements.add(new MenuElement("#FFFFFF","Crear ruta"));
+        elements.add(new MenuElement("#FFFFFF","Iniciar viaje"));
+        elements.add(new MenuElement("#FFFFFF","Cerrar sesión"));
 
         MenuAdapter menuAdapter=new MenuAdapter(elements,this);
         RecyclerView recyclerView=findViewById(R.id.menuRecyclerView);
