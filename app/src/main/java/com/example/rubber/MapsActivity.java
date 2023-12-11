@@ -6,7 +6,6 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
 import android.Manifest;
-import android.app.LocaleManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,11 +14,8 @@ import android.location.LocationListener;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
-
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -28,13 +24,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-import org.w3c.dom.Text;
+
 
 public class MapsActivity extends AppCompatActivity implements OnMapReadyCallback,LocationListener,GoogleMap.OnMapClickListener, GoogleMap.OnMapLongClickListener {
     //EditText txtLatitud,txtlongitud;
     GoogleMap mMap;
     TextView tvUbicacion;
-    ImageButton btnCamara,btnMenu;
+    ImageButton btnCamara,btnMenu,btnMqtt;
     private LocationManager locationManager;
     private Marker myLocationMarker;
 
@@ -45,6 +41,7 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         tvUbicacion=findViewById(R.id.tvUbicacion);
         btnCamara=findViewById(R.id.btnCamera);
         btnMenu=findViewById(R.id.btnMenu);
+        btnMqtt=findViewById(R.id.btnMqtt);
 
         btnCamara.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,12 +57,21 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
                 startActivity(intent);
             }
         });
-        //pedirPermisosUbicacion();
-        //miUbicacion();
-        //txtLatitud=findViewById(R.id.txtLatitud);
-        //txtlongitud=findViewById(R.id.txtLongitud);
+        btnMqtt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(MapsActivity.this,MqttActivity.class);
+                startActivity(intent);
+            }
+        });
+        // Verificar si los permisos de ubicación están otorgados
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED ||
+                ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
 
-        // Obtener el mapa asincrónicamente
+            // Solicitar permisos de ubicación
+            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.ACCESS_COARSE_LOCATION, Manifest.permission.ACCESS_FINE_LOCATION}, 1);
+        }
+
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
         mapFragment.getMapAsync(this);
@@ -74,7 +80,6 @@ public class MapsActivity extends AppCompatActivity implements OnMapReadyCallbac
         locationManager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
     }
-
     @Override
     public void onMapReady(@NonNull GoogleMap googleMap) {
         mMap = googleMap;
