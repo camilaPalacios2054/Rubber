@@ -5,15 +5,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.rubber"
+    namespace = "app.santo.rubber"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.rubber"
+        applicationId = "app.santo.rubber"
         minSdk = 24
         targetSdk = 33
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

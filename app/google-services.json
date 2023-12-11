@@ -9,7 +9,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:398399853870:android:3fe544402fc4d9f2be56bf",
         "android_client_info": {
-          "package_name": "com.example.rubber"
+          "package_name": "app.santo.rubber"
         }
       },
       "oauth_client": [],
